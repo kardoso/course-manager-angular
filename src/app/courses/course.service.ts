@@ -9,6 +9,10 @@ export class CourseService {
   retrieveAll(): Course[] {
     return COURSES;
   }
+
+  retriveById(id: number): Course {
+    return COURSES.find((course: Course) => course.id === id);
+  }
 }
 
 var COURSES: Course[] = [
